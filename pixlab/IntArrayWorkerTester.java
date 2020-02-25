@@ -20,18 +20,31 @@ public class IntArrayWorkerTester
     System.out.println("fills with 2's on diagonal, 3's to left, and 1's to right");
     worker.print();
   }
+  public static int getCount(int n){
+     int count = 0;
+     for(int row = 0 ; row < matrix.length ; row++){
+         for(int col = 0; col < matrix[0].length; col++){
+             if(matrix[row][col]==n){
+                 count++;
+   }
+  }
+ }
+ return count;
+}
+  /**
+   * getCount() - a.4
+   */
   
-  /** Method to test getCount*/
-//  public static void testGetCount()
-//  {
-//    IntArrayWorker worker = new IntArrayWorker();
-//    int[][] nums = new int[3][4];
-//    worker.setMatrix(nums);
-//    worker.fillPattern1();
-//    int count = worker.getCount(1);
-//    System.out.println("Count should be 6 and count is " + count);
-//  }
-  
+  public static void testGetCount()
+  {
+    IntArrayWorker worker = new IntArrayWorker();
+    int[][] nums = new int[3][4];
+    worker.setMatrix(nums);
+    worker.fillPattern1();
+    int count = worker.getCount(1);
+    System.out.println("Count should be 6 and count is " + count);
+  }
+
   /** Method to test getTotal */
   public static void testGetTotal()
   {
